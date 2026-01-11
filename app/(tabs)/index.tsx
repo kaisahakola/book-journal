@@ -5,6 +5,7 @@ import { auth } from '@/config/firebase';
 import { useUserProfile } from '@/hooks/useUserProfile';
 import HomeScreenSquareBtn from '@/components/HomeScreenSquareBtn';
 import HomeScreenAddNewBtn from '@/components/HomeScreenAddNewBtn';
+import BookOfTheDay from '@/components/BookOfTheDay';
 import { useRouter } from 'expo-router';
 
 const SHEET_HEIGHT = 700;
@@ -53,6 +54,7 @@ const Home = () => {
           />
         </View>
         <HomeScreenAddNewBtn />
+        <BookOfTheDay />
       </Animated.View>
     </SafeAreaView>
   );

@@ -5,7 +5,8 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
   View,
-  TouchableOpacity, ActivityIndicator,
+  TouchableOpacity,
+  ActivityIndicator,
 } from 'react-native';
 import { useState } from 'react';
 import { GoogleBooksResponse, GoogleBook, BookApiData } from '@/types/bookApi';
