@@ -49,8 +49,7 @@ export const useDailyRecommendation = () => {
       );
 
       if (!apiResult.ok) {
-        console.error('No book found: ', aiJsonValue.title);
-        return;
+        console.error('No book found in Google Books API: ', aiJsonValue.title);
       }
       const data = await apiResult.json();
       const cover = data.items?.[0]?.volumeInfo?.imageLinks?.thumbnail;
