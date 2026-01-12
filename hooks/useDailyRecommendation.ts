@@ -49,7 +49,7 @@ export const useDailyRecommendation = () => {
       );
 
       if (!apiResult.ok) {
-        console.error('No book found: ', aiResult.title);
+        console.error('No book found: ', aiJsonValue.title);
         return;
       }
       const data = await apiResult.json();
