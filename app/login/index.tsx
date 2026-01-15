@@ -1,4 +1,4 @@
-import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import { View, StyleSheet, Image, Text } from 'react-native';
 import AuthForm from '@/components/AuthForm';
 import {
   createUserWithEmailAndPassword,
@@ -16,6 +16,7 @@ import { setDoc } from '@firebase/firestore';
 import { doc } from 'firebase/firestore';
 import { getAuthErrorMessages } from '@/utils/getAuthErrorMessages';
 import Toast from 'react-native-toast-message';
+import SubmitButton from '@/components/SubmitButton';
 
 const Index = () => {
   const [activeForm, setActiveForm] = useState<
@@ -117,6 +118,10 @@ const Index = () => {
         ]}
       >
         <Text style={styles.header}>Welcome to the{'\n'}Book Journal!</Text>
+        <Image
+          style={styles.logo}
+          source={require('../../assets/images/logo-only-book.png')}
+        />
       </View>
 
       <BottomSheet
@@ -132,20 +137,16 @@ const Index = () => {
         <BottomSheetView style={styles.contentContainer}>
           {activeForm === '' ? (
             <View style={styles.buttonContainer}>
-              <Text style={styles.text}>Keep up with your reading!</Text>
-              <TouchableOpacity
-                style={styles.button}
+              <Text style={styles.text1}>Keep up with your reading!</Text>
+              <SubmitButton
                 onPress={() => handleSelectForm('login')}
-              >
-                <Text style={styles.buttonText}>Login</Text>
-              </TouchableOpacity>
-              <Text style={styles.text}>Don&#39;t have an account yet?</Text>
-              <TouchableOpacity
-                style={styles.button}
+                label="Login"
+              />
+              <Text style={styles.text2}>Don&#39;t have an account yet?</Text>
+              <SubmitButton
                 onPress={() => handleSelectForm('signup')}
-              >
-                <Text style={styles.buttonText}>Sign Up</Text>
-              </TouchableOpacity>
+                label="Sign Up"
+              />
             </View>
           ) : activeForm === 'login' ? (
             <AuthForm
@@ -185,6 +186,10 @@ const Index = () => {
 };
 
 const styles = StyleSheet.create({
+  logo: {
+    width: 200,
+    height: 200,
+  },
   button: {
     marginTop: 15,
     padding: 15,
@@ -202,11 +207,17 @@ const styles = StyleSheet.create({
     margin: 'auto',
     marginBottom: '30%',
   },
-  text: {
+  text1: {
     textAlign: 'center',
     marginTop: 30,
     fontSize: 24,
-    fontFamily: 'Crafteds',
+    fontFamily: 'Marcellus',
+  },
+  text2: {
+    textAlign: 'center',
+    marginTop: 30,
+    fontSize: 20,
+    fontFamily: 'Marcellus',
   },
   contentContainer: {
     padding: 30,
@@ -217,7 +228,7 @@ const styles = StyleSheet.create({
   },
   sheetContainer: {
     flex: 1,
-    backgroundColor: '#E6E6E9',
+    backgroundColor: '#DBEEEC',
   },
   backgroundContainer: {
     paddingTop: '30%',
@@ -226,7 +237,7 @@ const styles = StyleSheet.create({
     zIndex: 0,
   },
   header: {
-    fontFamily: 'Crafteds',
+    fontFamily: 'Marcellus',
     fontSize: 32,
     textAlign: 'center',
   },

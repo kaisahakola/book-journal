@@ -8,7 +8,7 @@ import HomeScreenAddNewBtn from '@/components/HomeScreenAddNewBtn';
 import BookOfTheDay from '@/components/BookOfTheDay';
 import { useRouter } from 'expo-router';
 
-const SHEET_HEIGHT = 700;
+const SHEET_HEIGHT = 710;
 
 const Home = () => {
   const translateY = useRef(new Animated.Value(SHEET_HEIGHT)).current;
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontSize: 20,
     fontFamily: 'Marcellus',
-    marginTop: 20,
+    marginTop: 15,
   },
   squareBtns: {
     flexDirection: 'row',

@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontFamily: 'Helvetica',
+    marginBottom: 20,
   },
   profileImage: {
     width: 150,

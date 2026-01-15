@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   note: {
     marginTop: 25,
     marginBottom: 15,
-    backgroundColor: '#F4F4F6',
+    backgroundColor: '#DBEEEC',
     padding: 20,
     borderRadius: 20,
     width: '80%',

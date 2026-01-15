@@ -10,6 +10,7 @@ import { useCallback, useState } from 'react';
 import SearchBookApi from '@/components/SearchBookApi';
 import ButtonWithIcon from '@/components/ButtonWithIcon';
 import { BookApiData } from '@/types/bookApi';
+import SubmitButton from '@/components/SubmitButton';
 
 const AddNewBook = () => {
   const [showForm, setShowForm] = useState(false);
@@ -66,18 +67,14 @@ const AddNewBook = () => {
       {!showForm && !showBookApiSearch && (
         <View style={styles.chooseOptionBtns}>
           <Text style={styles.title}>Add a New Book</Text>
-          <TouchableOpacity
-            style={styles.showFormBtn}
+          <SubmitButton
             onPress={() => setShowForm(true)}
-          >
-            <Text style={styles.btnText}>Add manually</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.showFormBtn}
+            label="Add manually"
+          />
+          <SubmitButton
             onPress={() => setShowBookApiSearch(true)}
-          >
-            <Text style={styles.btnText}>Search from Google Books</Text>
-          </TouchableOpacity>
+            label="Search from Google Books"
+          />
         </View>
       )}
       {showForm && (
@@ -123,13 +120,14 @@ const AddNewBook = () => {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-    backgroundColor: '#E6E6E9',
+    backgroundColor: '#F4F4F6',
   },
   chooseOptionBtns: {
     marginTop: '50%',
-    width: '100%',
-    gap: 30,
+    width: '90%',
+    gap: 20,
     alignItems: 'center',
+    margin: 'auto',
   },
   showFormBtn: {
     backgroundColor: '#001427',

@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    backgroundColor: '#001427',
+    backgroundColor: '#2A9D8F',
     width: '30%',
     padding: 10,
     borderRadius: 15,
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   btnText: {
     textAlign: 'center',
     fontSize: 18,
-    color: '#F4D58D',
+    color: 'white',
     fontFamily: 'AndadaPro',
   },
   scrollContainer: {

@@ -16,16 +16,18 @@ const SubmitButton = ({ onPress, label }: SubmitButtonProps) => {
 const styles = StyleSheet.create({
   container: {
     marginTop: 15,
-    padding: 15,
     borderRadius: 20,
     height: 50,
-    backgroundColor: '#001427',
+    backgroundColor: '#2A9D8F',
     width: '100%',
+    justifyContent: 'center',
   },
   text: {
-    color: '#F4D58D',
+    color: 'white',
     textAlign: 'center',
     fontFamily: 'AndadaPro',
+    fontWeight: 'bold',
+    fontSize: 18,
   },
 });
 
