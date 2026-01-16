@@ -6,10 +6,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { GoogleBook } from '@/types/bookApi';
+import { BookApiData } from '@/types/bookApi';
 
 interface ApiResultListProps {
-  books: GoogleBook[];
+  books: BookApiData[];
   handleSelectBook: (id: string) => void;
 }
 
@@ -21,23 +21,22 @@ const ApiResultList = ({ books, handleSelectBook }: ApiResultListProps) => {
           data={books}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => {
-            const info = item.volumeInfo;
             return (
               <TouchableOpacity
                 style={styles.listItem}
                 onPress={() => handleSelectBook(item.id)}
               >
-                {info.imageLinks && (
+                {item.thumbnail && (
                   <Image
                     style={styles.thumbnail}
-                    source={{ uri: info.imageLinks.thumbnail }}
+                    source={{ uri: item.thumbnail }}
                   />
                 )}
                 <View style={styles.textContainer}>
-                  <Text style={styles.title}>{info.title}</Text>
-                  <Text style={styles.author}>{info.authors?.join(', ')}</Text>
+                  <Text style={styles.title}>{item.title}</Text>
+                  <Text style={styles.author}>{item.author}</Text>
                   <Text style={styles.publishedYear}>
-                    {info.publishedDate?.slice(0, 4)}
+                    {item.publishedDate?.slice(0, 4)}
                   </Text>
                 </View>
               </TouchableOpacity>

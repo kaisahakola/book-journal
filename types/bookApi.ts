@@ -19,8 +19,10 @@ export type GoogleBooksResponse = {
 };
 
 export type BookApiData = {
+  id: string;
   title: string;
   author?: string;
   genre: string;
   thumbnail?: string | null;
+  publishedDate?: string;
 };

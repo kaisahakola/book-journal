@@ -19,7 +19,7 @@ interface SearchBookApiProps {
 
 const SearchBookApi = ({ onSelectBook }: SearchBookApiProps) => {
   const [query, setQuery] = useState<string>('');
-  const [books, setBooks] = useState<GoogleBook[]>([]);
+  const [books, setBooks] = useState<BookApiData[]>([]);
   const [bookListVisible, setBookListVisible] = useState<boolean>(false);
   const [activateLoadingAnimation, setActivateLoadingAnimation] =
     useState<boolean>(false);
@@ -33,7 +33,15 @@ const SearchBookApi = ({ onSelectBook }: SearchBookApiProps) => {
         `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}`,
       );
       const data: GoogleBooksResponse = await response.json();
-      setBooks(data.items || []);
+      const bookResponse = (data.items || []).map((item) => ({
+        id: item.id,
+        title: item.volumeInfo.title,
+        author: item.volumeInfo.authors?.join(', '),
+        thumbnail: item.volumeInfo.imageLinks?.thumbnail ?? null,
+        genre: item.volumeInfo.categories?.[0] ?? 'Unknown',
+        publishedDate: item.volumeInfo.publishedDate ?? '',
+      }));
+      setBooks(bookResponse);
       setBookListVisible(true);
       setActivateLoadingAnimation(false);
     } catch (err) {
@@ -48,6 +56,7 @@ const SearchBookApi = ({ onSelectBook }: SearchBookApiProps) => {
       );
       const data: GoogleBook = await response.json();
       const bookDetails: BookApiData = {
+        id: data.id,
         title: data.volumeInfo.title,
         author: data.volumeInfo.authors?.join(', '),
         genre: data.volumeInfo.categories?.[0] ?? 'Unknown',
