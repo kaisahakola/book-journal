@@ -1,50 +1,119 @@
-# Welcome to your Expo app 👋
+# BookJournal
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile app that helps users track the books they’ve read,
+organize personal notes and ratings, view reading statistics, and discover
+new books through curated and AI-powered recommendations.
 
-## Get started
+## Overview
 
-1. Install dependencies
+**BookJournal** was built to solve a simple but personal problem:
 
-   ```bash
-   npm install
-   ```
+*Keeping track of the books you’ve read, what you thought about them, and what
+you want to read next.*
 
-2. Start the app
+At its core, the app functions as a personal reading library, allowing users to:
 
-   ```bash
-   npx expo start
-   ```
+- Log books they’ve read
+- Add notes and ratings
+- Track reading habits over time
 
-In the output, you'll find options to open the app in a
+On top of this foundation, the app introduces smart discovery features using
+AI: reading recommendations based on personal library and a shared Book of the
+Day.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Features
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 📖 Personal Library (Core Feature)
 
-## Get a fresh project
+- Add books you’ve read or are reading
+- Store:
+  - Title & author
+  - Personal notes
+  - Rating
+  - Genre
+  - Date added
+- All data is saved to a Firestore database.
 
-When you're ready, run:
+### 📊 Reading Statistics
 
-```bash
-npm run reset-project
-```
+- View statistics based on your library
+- Genre distribution
+- Reading trends over time
+- Helps users understand their reading preferences
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 🔍 Book Search & Manual Entry
 
-## Learn more
+- Add books manually
+- Search books using the Google Books API
+- Automatically fetch:
+  - Cover images
+  - Title & author metadata
 
-To learn more about developing your project with Expo, look at the following resources:
+### 🤖 AI-Powered Recommendations (Optional)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- Ask AI for personalized book recommendations
+- Designed as a discovery tool — not a requirement
+- AI responses are parsed safely and integrated into the app flow
 
-## Join the community
+### 📅 Book of the Day
 
-Join our community of developers creating universal apps.
+- A single daily recommendation shared across users
+- Cached locally to ensure:
+  - One recommendation per day
+  - No repeated requests
+  - Acts as a lightweight discovery feature, separate from the personal
+  library and recommendations
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Design & Assets
+
+The app’s logo and selected UI elements (icons and buttons) were created using
+licensed Canva design assets. All Canva elements are used in accordance with
+Canva’s licensing terms.
+
+## Tech Stack
+
+- React Native
+- Expo
+- TypeScript
+- Firebase Firestore database
+- Google Books API
+- AI integration (Gemini / LLM)
+- Cloudflare Worker
+- AsyncStorage
+
+## Installation & Setup
+
+### Prerequisites
+
+- Node.js
+- Expo CLI
+
+````
+git clone https://github.com/kaisahakola/reading-journal
+cd reading-journal
+npm install
+npx expo start
+````
+
+## Known Limitations
+
+- Not published on App Store or Google Play (developer fees)
+- AI recommendations depend on network availability
+
+## Project Goals & Learning Outcomes
+
+This project was built to deepen practical experience with:
+
+- Building scalable React Native apps using hooks and custom logic
+- Managing asynchronous data flows (AI responses, API calls)
+- Integrating third-party APIs safely and reliably
+- Working with cloud databases and local caching strategies
+
+BookJournal emphasizes real-world app architecture over demo-only features.
+
+## Author
+
+Kaisa Hakola
+
+- GitHub: https://github.com/kaisahakola
+- LinkedIn: https://www.linkedin.com/in/khakola/
