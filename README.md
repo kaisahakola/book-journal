@@ -32,7 +32,8 @@ Day.
   - Rating
   - Genre
   - Date added
-- All data is saved to a Firestore database.
+- All data is saved to a Firestore database
+- Edit and delete books you have added to your library
 
 ### 📊 Reading Statistics
 
@@ -73,9 +74,11 @@ add a profile picture
 ## Screenshots
 
 <p float="left">
-  <img src="./assets/images/readme/first.jpeg" alt="Library screen" width="250" />
+  <img src="./assets/images/readme/first.jpeg" alt="Welcome screen" width="250" />
   <img src="./assets/images/readme/login.jpeg" alt="Login screen" width="250" />
   <img src="./assets/images/readme/home.jpeg" alt="Home screen" width="250" />
+  <img src="./assets/images/readme/library.jpeg" alt="Library screen" width="250" />
+  <img src="./assets/images/readme/book-details.jpeg" alt="Book details screen" width="250" />
   <img src="./assets/images/readme/add-manually.jpeg" alt="Add new book manually screen" width="250" />
   <img src="./assets/images/readme/search-api.jpeg" alt="Search from Google Books API screen" width="250" />
   <img src="./assets/images/readme/profile.jpeg" alt="Profile screen" width="250" />
