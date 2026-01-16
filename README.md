@@ -64,6 +64,24 @@ Day.
   - Acts as a lightweight discovery feature, separate from the personal
   library and recommendations
 
+### 👤 Profile settings
+
+- User information is saved in profile settings
+- User can modify their personal information (name and email account) and
+add a profile picture
+
+## Screenshots
+
+<img src="./assets/images/readme/first.jpeg" alt="Library screen" width="250" />
+<img src="./assets/images/readme/login.jpeg" alt="Login screen" width="250" />
+<img src="./assets/images/readme/home.jpeg" alt="Home screen" width="250" />
+<img src="./assets/images/readme/add-manually.jpeg" alt="Add new book manually screen" width="250" />
+<img src="./assets/images/readme/search-api.jpeg" alt="Search from Google Books API screen" width="250" />
+<img src="./assets/images/readme/profile.jpeg" alt="Profile screen" width="250" />
+<img src="./assets/images/readme/statistics.jpeg" alt="Statistics screen" width="250" />
+<img src="./assets/images/readme/recommendations.jpeg" alt="AI recommendations screen" width="250" />
+
+
 ## Design & Assets
 
 The app’s logo and selected UI elements (icons and buttons) were created using
@@ -99,6 +117,11 @@ npx expo start
 
 - Not published on App Store or Google Play (developer fees)
 - AI recommendations depend on network availability
+
+## Future Improvements
+
+- Add more statistics
+- Improve adding a new book feature
 
 ## Project Goals & Learning Outcomes
 
