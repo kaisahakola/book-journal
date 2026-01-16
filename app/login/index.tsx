@@ -1,22 +1,22 @@
-import { View, StyleSheet, Image, Text } from 'react-native';
 import AuthForm from '@/components/AuthForm';
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  updateProfile,
-  sendPasswordResetEmail,
-} from 'firebase/auth';
+import SubmitButton from '@/components/SubmitButton';
 import { auth, db } from '@/config/firebase';
 import { AuthData, AuthMode } from '@/types/auth';
-import { router } from 'expo-router';
-import { useRef, useState } from 'react';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
-import { setDoc } from '@firebase/firestore';
-import { doc } from 'firebase/firestore';
 import { getAuthErrorMessages } from '@/utils/getAuthErrorMessages';
+import { setDoc } from '@firebase/firestore';
+import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet';
+import { router } from 'expo-router';
+import {
+  createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from 'firebase/auth';
+import { doc } from 'firebase/firestore';
+import { useRef, useState } from 'react';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Toast from 'react-native-toast-message';
-import SubmitButton from '@/components/SubmitButton';
 
 const Index = () => {
   const [activeForm, setActiveForm] = useState<
@@ -117,7 +117,7 @@ const Index = () => {
           { opacity: sheetIndex === 1 ? 0 : 1 },
         ]}
       >
-        <Text style={styles.header}>Welcome to the{'\n'}Book Journal!</Text>
+        <Text style={styles.header}>Welcome to the{'\n'}BookJournal!</Text>
         <Image
           style={styles.logo}
           source={require('../../assets/images/logo-only-book.png')}

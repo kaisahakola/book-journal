@@ -8,8 +8,8 @@ new books through curated and AI-powered recommendations.
 
 **BookJournal** was built to solve a simple but personal problem:
 
-*Keeping track of the books you’ve read, what you thought about them, and what
-you want to read next.*
+_Keeping track of the books you’ve read, what you thought about them, and what
+you want to read next._
 
 At its core, the app functions as a personal reading library, allowing users to:
 
@@ -63,18 +63,17 @@ Day.
   - One recommendation per day
   - No repeated requests
   - Acts as a lightweight discovery feature, separate from the personal
-  library and recommendations
+    library and recommendations
 
 ### 👤 Profile settings
 
 - User information is saved in profile settings
 - User can modify their personal information (name and email account) and
-add a profile picture
+  add a profile picture
 
 ## Screenshots
 
 <p float="left">
-  <img src="./assets/images/readme/first.jpeg" alt="Welcome screen" width="250" />
   <img src="./assets/images/readme/login.jpeg" alt="Login screen" width="250" />
   <img src="./assets/images/readme/home.jpeg" alt="Home screen" width="250" />
   <img src="./assets/images/readme/library.jpeg" alt="Library screen" width="250" />
@@ -85,8 +84,6 @@ add a profile picture
   <img src="./assets/images/readme/statistics.jpeg" alt="Statistics screen" width="250" />
   <img src="./assets/images/readme/recommendations.jpeg" alt="AI recommendations screen" width="250" />
 </p>
-
-
 
 ## Design & Assets
 
@@ -112,12 +109,12 @@ Canva’s licensing terms.
 - Node.js
 - Expo CLI
 
-````
-git clone https://github.com/kaisahakola/reading-journal
-cd reading-journal
+```
+git clone https://github.com/kaisahakola/book-journal
+cd book-journal
 npm install
 npx expo start
-````
+```
 
 ## Known Limitations
 
