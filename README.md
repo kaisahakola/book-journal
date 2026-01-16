@@ -4,6 +4,9 @@ A React Native mobile app that helps users track the books they’ve read,
 organize personal notes and ratings, view reading statistics, and discover
 new books through curated and AI-powered recommendations.
 
+**Note:** This is a personal, non-commercial project for practicing mobile
+development skills. The app is not published on any app store.
+
 ## Overview
 
 **BookJournal** was built to solve a simple but personal problem:
