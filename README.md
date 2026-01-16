@@ -74,6 +74,7 @@ Day.
 ## Screenshots
 
 <p float="left">
+  <img src="./assets/images/readme/welcome.jpeg" alt="Welcome screen" width="250" />
   <img src="./assets/images/readme/login.jpeg" alt="Login screen" width="250" />
   <img src="./assets/images/readme/home.jpeg" alt="Home screen" width="250" />
   <img src="./assets/images/readme/library.jpeg" alt="Library screen" width="250" />
